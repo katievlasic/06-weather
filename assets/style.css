@@ -1,11 +1,6 @@
-.main{
-    background-color: gray;
-}
 
-.data{
-    background-color: aquamarine;
-}
-
-.search{
-    background-color: bisque;
+.weather{
+    background-color: #6610f2;
+    color: white;
+    padding: 30px;
 }

@@ -15,15 +15,24 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <main class="row justify-content-left">
-      <div class="search">
-        <h1>Search for a City:</h1>
-      </div>
-      <div class="data">
-        <h2>City Name and Date</h2>
-        <h3>5-Day Forecast:</h3>
-      </div>
+    <h1 class="weather text-center">Weather Dashboard</h1>
+    <main class="container-fluid row">
+        <div class ="col-3">
+            <div class="search col">
+                <h2>Search for a City:</h1>
+                    <form>
+                        <div class="mb-4 col p-3 ">
+                          <input type="text" class="form-control" id="searchCity" placeholder="San Diego">
+                        </div>
+                        <button type="submit" class="btn btn-primary m-3">Search</button>
+                      </form>
+                </div>
+        </div>
+        <div class="data col-9">
+                <h3 class="row">City Name and Date</h2>
+                <h4 class="row">5-Day Forecast:</h3>
+        </div>
     </main>
-  </body>
+    </body>
   <script src="./assets/script.js"></script>
 </html>
