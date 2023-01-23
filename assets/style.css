@@ -1,11 +1,10 @@
-
 .weather{
     background-color: #6610f2;
     color: white;
     padding: 30px;
 }
 
-h3{
+.current{
     border: black solid;
     padding: 20px;
 }

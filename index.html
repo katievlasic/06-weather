@@ -22,21 +22,36 @@
                 <h2>Search for a City:</h1>
                     <form>
                         <div class="mb-4 col p-3 ">
-                          <input type="text" class="form-control" id="searchCity" placeholder="San Diego">
+                            <input list="cities" class="form-control">
+                            <datalist id="cities">
+                                <option value="Anchorage, AK">Anchorage, AK</option>
+                                <option value="Austin, TX">Austin, TX</option>
+                                <option value="Boston, MA">Boston, MA</option>
+                                <option value="Cleveland, OH">Cleveland, OH</option>
+                                <option value="Denver, CO">Denver, CO</option>
+                                <option value="Honolulu, HI">Honolulu, HI</option>
+                                <option value="Key West, FL">Key West, FL</option>
+                                <option value="Minneapolis, MN">Minneapolis, MN</option>
+                                <option value="San Diego, CA">San Diego, CA</option>
+                                <option value="Seattle, WA">Seattle, WA</option>
+                           </datalist>
+                          <!-- <input type="text" class="form-control" id="searchCity" placeholder="San Diego"> -->
                         </div>
                         <button type="submit" class="btn btn-primary m-3">Search</button>
                       </form>
                 </div>
         </div>
         <div class="data col-9">
-                <h3 class="row">City Name and Date</h2>
+                <div class="row current">
+                <h3>City Name and Date</h3>
                     <ul>
                         <li>Temperature:</li>
                         <li>Wind:</li>
                         <li>Humidity:</li>
                     </ul>
-                <h4>5-Day Forecast:</h3>
-                    <div class="five row">
+                </div>
+                <h4>5-Day Forecast:</h4>
+                    <div class="five row future">
                     <div class="col">1</div>
                     <div class="col">2</div>
                     <div class="col">3</div>
