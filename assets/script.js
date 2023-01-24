@@ -13,7 +13,7 @@ selectCity.addEventListener("click", function (event) {
   console.log("User entered " + city);
   storeGet.push(city); // update array using array method push to add city entered
   localStorage.setItem(storeKey, JSON.stringify(storeGet));
-  searchBar.append(storeGet);
+  //   searchBar.append(storeGet);
   currentForecast(city); // handoff city to function
 });
 
@@ -36,6 +36,12 @@ let currentForecast = function (city) {
       console.log(data);
       forecast(data.coord.lat, data.coord.lon);
       document.getElementById("cityName").textContent = data.name;
+      document.getElementById("temperature").textContent =
+        "Temperature: " + data.main.temp + " F";
+      document.getElementById("wind").textContent =
+        "Wind: " + data.wind.speed + " MPH";
+      document.getElementById("humidity").textContent =
+        "Humidity: " + data.main.humidity + " %";
     });
 };
 
@@ -58,6 +64,23 @@ let forecast = function (lat, lon) {
     })
     .then(function (data) {
       console.log(data);
+      for (let i = 0; i < 5; i++) {
+        let card = document.createElement("div");
+        let weather = document.createElement("ul");
+        let temp = document.createElement("il");
+        let hum = document.createElement("il");
+        let wind = document.createElement("il");
+        // weather.innerHTML = "Emoji: " + data.list[i].weather.icon;
+        temp.innerHTML = "Temp.: " + data.list[i].main.temp + " F";
+        hum.innerHTML = "Humidity: " + data.list[i].main.humidity + " %";
+        wind.innerHTML = "Wind: " + data.list[i].wind.speed + " MPH";
+        card.setAttribute("class", "col-auto card");
+        wFuture.appendChild(card);
+        card.appendChild(weather);
+        weather.appendChild(temp);
+        weather.appendChild(hum);
+        weather.appendChild(wind);
+      }
     });
 };
 
