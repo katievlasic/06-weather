@@ -13,4 +13,4 @@ The following will be available on this web application:
 
 I'm currently struggling with getting the icons to be visible and some of the dynamic formatting in js.
 
-![Weather Dashboard Web Application](https://katievlasic.github.io/06-weather/)
+[Weather Dashboard Web Application](https://katievlasic.github.io/06-weather/)
